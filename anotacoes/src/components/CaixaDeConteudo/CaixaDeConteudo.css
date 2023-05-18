@@ -1,28 +1,8 @@
 .CaixaDeConteudo{
     display: flex;
     flex-direction: column;
-    gap: 24rem;
-    height: 200rem;
-    width: 200rem;
-    padding: 24rem;
-    border-radius: 24rem;
-    background-color: rgba(155, 137, 137, 0.473);
-}
-.CaixaDeConteudo:hover{
-    cursor: pointer;
-    box-shadow: 1px 1px 15px -8px rgb(255, 255, 255);
-}
-
-
-.CaixaDeConteudo h2, p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.CaixaDeConteudo h2{
-    white-space: nowrap;
-    font-size: 24rem;
-    border-bottom: solid 1rem rgba(0, 0, 0, 0.5);
-}
-.CaixaDeConteudo p{
-    font-size: 16rem;
+    gap: 12rem;
+    height: 80%;
+    width: 90%;
+    padding-top: 24rem;
 }
