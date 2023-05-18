@@ -1,13 +1,18 @@
 .ToAddButton{
+    position: fixed;
+    right: 25rem;
+    bottom: 25rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40rem;
-    width: 40rem;
+    height: 60rem;
+    width: 60rem;
     border-radius: 50%;
     border: solid 1rem rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 10px 0px;
+    box-shadow: 0px 0px 5px 0px var(--Preto_2);
 }
 .ToAddButton:hover{
+    transition: .5s;
     cursor: pointer;
+    box-shadow: 1px 1px 10px 2px var(--Preto_2);
 }
