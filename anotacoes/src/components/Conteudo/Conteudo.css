@@ -1,27 +1,56 @@
 .Conteudo{
     display: flex;
-    flex-direction: column;
-    gap: 24rem;
-    height: 200rem;
-    width: 200rem;
-    padding: 24rem;
-    border-radius: 24rem;
-    background-color: rgba(155, 137, 137, 0.473);
+    flex-direction: row;
+    align-items: center;
+    gap: 8rem;
+    overflow: hidden;
+    height: 100rem;
+    width: 100%;
+    border-radius: 12rem;
+    background-color: var(--Branco);
+    user-select: none;
 }
 .Conteudo:hover{
+    transition: .2s;
     cursor: pointer;
-    box-shadow: 1px 1px 15px -8px rgb(255, 255, 255);
+    box-shadow: 1px 1px 5px 1px var(--Preto_2);
+}
+.Conteudo::selection{
+    background-color: red;
 }
 
+.Conteudo .singleCaracter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+    max-width: 150px;
+    min-width: 100px;
+    background-color: var(--Preto_1);
+    color: var(--Cinza);
+}
+.Conteudo .singleCaracter h1{
+    font-size: 80rem;
+}
+.Conteudo .DivdoTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    height: 100%;
+    width: 85%;
+    padding: 12rem;
+}
 
 .Conteudo h2, p{
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: var(--Preto_2);
 }
 .Conteudo h2{
-    white-space: nowrap;
-    font-size: 24rem;
-    border-bottom: solid 1rem rgba(0, 0, 0, 0.5);
+    font-size: 20rem;
 }
 .Conteudo p{
     font-size: 16rem;

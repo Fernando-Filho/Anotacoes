@@ -1,15 +1,25 @@
 import "./Conteudo.css"
 
-import React, { useState } from "react";
-
-
-
 const Conteudo = ({title, text}) => {
 
+    function mudarCor(){
+        alert("oi")
+    }
+
     return(
-        <div className="">
-            <h2>{title}</h2>
-            <p>{text}</p>
+        <div className="Conteudo" onClick={mudarCor}>
+            
+            <div className="singleCaracter">
+                <h1>
+                    {title.charAt(0).toUpperCase()}
+                </h1>
+            </div>
+
+            <div className="DivdoTexto">
+                <h2>{title}</h2>
+                <p>{text}</p>
+            </div>
+
         </div>
     )
 }
