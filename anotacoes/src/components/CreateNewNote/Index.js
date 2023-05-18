@@ -7,32 +7,42 @@ const CreateNewNote = ({onAddNote}) => {
     const [title, setTitle] = useState("")
     const [text, setText] = useState("")
 
-    function handleCreateNewNote(){
+    function handleCreateNewNote(e){
+        e.preventDefault()
         const data = {
             title, text
         }
         console.log(data)
         onAddNote(data)
+        handleClearInput()
+    }
+
+    function handleClearInput(){
+        setTitle("")
+        setText("")
     }
 
     return(
-        <div    ClassName="CreateNewNote">
+        <form className="CreateNewNote"  onSubmit={handleCreateNewNote}>
 
             <input  type="text"
                     value={title}
-                    onChange={e => setTitle(e.target.value)}
                     placeholder="title"
+                    onChange={e => setTitle(e.target.value)}
+                    required
             />
 
             <input  type="text"
                     value={text}
-                    onChange={e => setText(e.target.value)}
                     placeholder="text"
+                    onChange={e => setText(e.target.value)}
+                    required
             />
 
             <button type="submit" onClick={handleCreateNewNote}/>
+            <button type="reset"/>
 
-        </div>
+        </form>
     )
 }
 
