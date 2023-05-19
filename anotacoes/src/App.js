@@ -2,6 +2,8 @@ import "./app.css"
 
 import { useState } from "react";
 
+import Search from "./components/Search/Index";
+import ToAdd from "./components/ToAdd/Index";
 import CaixaDeConteudo from "./components/CaixaDeConteudo/Index";
 import CreateNewNote from "./components/CreateNewNote/Index";
 
@@ -16,10 +18,21 @@ function App() {
   return (
     <div className="App">
 
-      <h1>O que vamos fazer hoje?</h1>
+      <header>
+        <Search 
+          placeholder="O que vamos fazer hoje?"
+        />
+        
+      </header>
 
-      <CaixaDeConteudo list={list}/>
-      <CreateNewNote onAddNote={handleSaveNote}/>
+      <main>
+        <CaixaDeConteudo list={list}/>
+        <CreateNewNote onAddNote={handleSaveNote}/>
+      </main>
+
+      <footer>
+        <ToAdd/>
+      </footer>
 
     </div>
   );
