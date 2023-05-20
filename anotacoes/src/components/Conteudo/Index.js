@@ -1,13 +1,29 @@
 import "./Conteudo.css"
 
+import React, { useState } from "react";
+
 const Conteudo = ({title, text}) => {
 
-    function mudarCor(){
-        alert("oi")
+    const [openModal, setOpenModal] = useState(false)
+
+    function modalNotion(){
+
+        setOpenModal(!openModal)
+
+        if(openModal === true){
+
+            return(
+                <div className="ModalNotion">
+                    <h1>{title}</h1>
+                    <p>{text}</p>
+                </div>
+            )
+        }
+
     }
 
     return(
-        <div className="Conteudo" onClick={mudarCor}>
+        <div className="Conteudo" onClick={modalNotion}>
             
             <div className="singleCaracter">
                 <h1>
