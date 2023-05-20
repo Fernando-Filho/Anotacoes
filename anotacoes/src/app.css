@@ -7,11 +7,11 @@
     color: aliceblue;
 }
 
-.App input{
+.App input, textarea{
     background-color: var(--Preto_1);
     color: var(--Cinza);
 }
-.App input:focus{
+.App input, textarea:focus{
     outline: none;
 }
 
