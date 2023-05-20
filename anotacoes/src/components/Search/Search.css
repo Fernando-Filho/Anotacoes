@@ -15,7 +15,10 @@
 }
 .Search input:hover{
     transition: .5s;
-    box-shadow: 3px 3px 10px 1px var(--Preto_2);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.Search input:focus{
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 .Search .IconSearch{
