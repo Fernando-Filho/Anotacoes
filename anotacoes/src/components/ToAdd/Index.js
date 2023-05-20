@@ -2,10 +2,14 @@ import "./ToAdd.css"
 
 import { VscAdd } from "react-icons/vsc";
 
-const ToAdd = (props) => {
+const ToAdd = (poupUpNewNote) => {
+
+    function teste(e){
+        poupUpNewNote(e.onClick)
+    }
     return(
         <div className="ToAdd">
-            <button className="ToAddButton">
+            <button className="ToAddButton" onClick={teste}>
                 <VscAdd className="More" size={24} color=""/>
             </button>
         </div>

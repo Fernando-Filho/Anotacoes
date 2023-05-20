@@ -10,10 +10,17 @@ import CreateNewNote from "./components/CreateNewNote/Index";
 function App() {
 
   const [list, setList] = useState([])
+  const [CreateNewNotes, setCreateNewNotes] = useState()
 
   function handleSaveNote(note){
     setList([...list, note])
   }
+
+  function poupUpNewNote(){
+    setCreateNewNotes(<CreateNewNote onAddNote={handleSaveNote}/>)
+  }
+  
+  const eu = CreateNewNotes
 
   return (
     <div className="App">
@@ -31,7 +38,7 @@ function App() {
       </main>
 
       <footer>
-        <ToAdd/>
+        <ToAdd onclick={poupUpNewNote}/>
       </footer>
 
     </div>
