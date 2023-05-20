@@ -1,4 +1,8 @@
 .CreateNewNote{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,7 +12,8 @@
     overflow: hidden;
     border-radius: 24rem;
     padding: 16rem;
-    background-color: var(--Branco);
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
 }
 
 .CreateNewNote .Inputs{
@@ -25,7 +30,10 @@
     text-overflow: ellipsis;
 }
 
-.CreateNewNote input, textarea:focus{
+.CreateNewNote input:focus{
+    box-shadow: 3px 3px 10px 1px var(--Preto_2);
+}
+.CreateNewNote textarea:focus{
     box-shadow: 3px 3px 10px 1px var(--Preto_2);
 }
 .CreateNewNote .Inputs input {
