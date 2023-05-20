@@ -1,7 +1,8 @@
 .CreateNewNote{
     display: flex;
     flex-direction: column;
-    gap: 16rem;
+    justify-content: space-around;
+    gap: 12rem;
     height: 500px;
     width: 90%;
     overflow: hidden;
@@ -9,24 +10,51 @@
     padding: 16rem;
     background-color: var(--Branco);
 }
-.CreateNewNote input{
-    height: 15%;
+
+.CreateNewNote .Inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+    height: 100%;
+}
+.CreateNewNote input, textarea{
     padding: 12rem;
     border-radius: 12rem;
-    background-color: var(--Preto_1);
     font-size: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.CreateNewNote input:focus{
+
+.CreateNewNote input, textarea:focus{
     box-shadow: 3px 3px 10px 1px var(--Preto_2);
 }
+.CreateNewNote .Inputs input {
+    height: 15%;
+}
+.CreateNewNote .Inputs textarea {
+    height: 85%;
+}
+
+
+.CreateNewNote .orientionButtons{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    right: 0%;
+    bottom: 0%;
+    justify-content: end;
+    align-items: end;
+    gap: 12rem;
+
+}
 .CreateNewNote button{
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
 }
 .CreateNewNote button[type="submit"]{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.5);
 }
 .CreateNewNote button[type="reset"]{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.5);
 }
