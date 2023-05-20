@@ -11,7 +11,7 @@ const Search = (props) => {
     function handleSearchNote(props){
 
         setSearchTitle(props.target.value)
-        console.log(props.target.value)
+        // console.log(props.target.value)
     }
 
     return(
