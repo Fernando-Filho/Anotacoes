@@ -3,42 +3,39 @@ import "./app.css"
 import { useState } from "react";
 
 import Search from "./components/Search/Index";
-import ToAdd from "./components/ToAdd/Index";
 import CaixaDeConteudo from "./components/CaixaDeConteudo/Index";
 import CreateNewNote from "./components/CreateNewNote/Index";
+
+import { VscAdd } from "react-icons/vsc";
 
 function App() {
 
   const [list, setList] = useState([])
-  const [CreateNewNotes, setCreateNewNotes] = useState()
+  const [openCreateNewNote, setOpenCreateNewNote] = useState(false)
 
   function handleSaveNote(note){
     setList([...list, note])
   }
 
-  function poupUpNewNote(){
-    setCreateNewNotes(<CreateNewNote onAddNote={handleSaveNote}/>)
-  }
-  
-  const eu = CreateNewNotes
-
   return (
     <div className="App">
 
       <header>
-        <Search 
-          placeholder="O que vamos fazer hoje?"
-        />
+        <Search placeholder="O que vamos fazer hoje?"/>
         
       </header>
 
       <main>
-        <CaixaDeConteudo list={list}/>
-        <CreateNewNote onAddNote={handleSaveNote}/>
+        <CaixaDeConteudo  list={list}/>
+        <CreateNewNote  onAddNote={handleSaveNote}
+                        openCreateNewNote={openCreateNewNote}
+                        setOpenCreateNewNote={setOpenCreateNewNote}/>
       </main>
 
       <footer>
-        <ToAdd onclick={poupUpNewNote}/>
+        <button className="ToAddButton" onClick={() => setOpenCreateNewNote(!openCreateNewNote)}>
+          <VscAdd className="More" size={24} color=""/>
+        </button>
       </footer>
 
     </div>
