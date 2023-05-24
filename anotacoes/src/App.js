@@ -17,6 +17,16 @@ function App() {
     setList([...list, note])
   }
 
+  const ToAddButton = () =>{
+    if(openCreateNewNote === false){
+      return(
+        <button className="ToAddButton" onClick={() => setOpenCreateNewNote(true)}>
+          <VscAdd className="More"  size={24} color=""/>
+        </button>
+      )
+    }
+  }
+
   return (
     <div className="App">
 
@@ -33,9 +43,7 @@ function App() {
       </main>
 
       <footer>
-        <button className="ToAddButton" onClick={() => setOpenCreateNewNote(true)}>
-          <VscAdd className="More"  size={24} color=""/>
-        </button>
+        <ToAddButton/>
       </footer>
 
     </div>
