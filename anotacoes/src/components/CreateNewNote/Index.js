@@ -2,8 +2,6 @@ import "./CreateNewNote.css"
 
 import React, { useState } from "react";
 
-import { AiOutlineCheck } from "react-icons/ai";
-
 const CreateNewNote = (props) => {
 
     const [title, setTitle] = useState("")
@@ -30,7 +28,7 @@ const CreateNewNote = (props) => {
 
     if(props.openCreateNewNote === true){
         return(
-            <form className="CreateNewNote"  onSubmit={handleCreateNewNote}>
+            <form className="CreateNewNote" onSubmit={handleCreateNewNote}>
 
                 <div className="Modal">
 
