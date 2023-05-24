@@ -37,12 +37,12 @@ const CreateNewNote = (props) => {
 
                     <input  type="text"
                             value={title}
-                            placeholder="title"
+                            placeholder="Título"
                             onChange={e => setTitle(e.target.value)}
                             required/>
 
                     <textarea   value={text}
-                                placeholder="text"
+                                placeholder="Assunto..."
                                 onChange={e => setText(e.target.value)}
                                 required/>
 
