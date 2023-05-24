@@ -12,7 +12,9 @@
   --Branco_Gelo: #dddada;
   --Preto_1: #212235;
   --Preto_2: #333438;
-  --Cinza: #b3b3b3
+  --Cinza: #b3b3b3;
+  --Verde:#32cd32;
+  --Vermelho: #e60026
 }
 body{
   height: 100vh;
