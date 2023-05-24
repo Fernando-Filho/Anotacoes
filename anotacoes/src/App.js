@@ -33,8 +33,8 @@ function App() {
       </main>
 
       <footer>
-        <button className="ToAddButton" onClick={() => setOpenCreateNewNote(!openCreateNewNote)}>
-          <VscAdd className="More" size={24} color=""/>
+        <button className="ToAddButton" onClick={() => setOpenCreateNewNote(true)}>
+          <VscAdd className="More"  size={24} color=""/>
         </button>
       </footer>
 
