@@ -4,26 +4,28 @@ import React, { useState } from "react";
 
 const Conteudo = ({title, text}) => {
 
-    const [openModal, setOpenModal] = useState(false)
+    const [openModalConteudo, setopenModalConteudo] = useState(false)
 
-    function modalNotion(){
+    const ModalConteudo = () => {
 
-        setOpenModal(!openModal)
+        // setopenModalConteudo(!openModalConteudo)
 
-        if(openModal === true){
+        if(openModalConteudo === true){
 
             return(
                 <div className="ModalNotion">
-                    <h1>{title}</h1>
-                    <p>{text}</p>
+                    <div className="ContainerModal">
+                        <h2>{title}</h2>
+                        <p>{text}</p>
+                    </div>
                 </div>
             )
         }
-
+        
     }
 
     return(
-        <div className="Conteudo" onClick={modalNotion}>
+        <div className="Conteudo" onClick={() => setopenModalConteudo(!openModalConteudo)}>
             
             <div className="singleCaracter">
                 <h1>
@@ -35,6 +37,8 @@ const Conteudo = ({title, text}) => {
                 <h2>{title}</h2>
                 <p>{text}</p>
             </div>
+
+            <ModalConteudo/>
 
         </div>
     )

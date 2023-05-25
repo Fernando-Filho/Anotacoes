@@ -15,9 +15,6 @@
     cursor: pointer;
     box-shadow: 1px 1px 5px 1px var(--Preto_2);
 }
-.Conteudo::selection{
-    background-color: red;
-}
 
 .Conteudo .singleCaracter{
     display: flex;
@@ -57,9 +54,28 @@
 }
 
 
-.ModalNotion{
+.Conteudo .ModalNotion{
     position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 101%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2rem);
+    cursor: default;
+}
+.Conteudo .ContainerModal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     height: 500px;
     width: 500px;
-    background-color: red;
+    padding: 40rem;
+    border-radius: 12rem;
+    background-color: var(--Branco);
+}
+.ContainerModal h1{
+    font-size: 45px;
 }
