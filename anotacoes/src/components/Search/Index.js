@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { AiOutlineSearch } from "react-icons/ai";
 
-const Search = (props) => {
+const Search = () => {
 
     const [searchTitle, setSearchTitle] = useState()
 
@@ -19,7 +19,7 @@ const Search = (props) => {
             <input 
                 type="text"
                 value={searchTitle}
-                placeholder={props.placeholder}
+                placeholder="O que vamos fazer hoje?"
                 onChange={handleSearchNote}
 
             />
