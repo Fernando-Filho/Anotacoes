@@ -31,7 +31,7 @@ function App() {
     <div className="App">
 
       <header>
-        <Search placeholder="O que vamos fazer hoje?"/>
+        <Search/>
         
       </header>
 
