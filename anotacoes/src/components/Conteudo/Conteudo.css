@@ -4,7 +4,7 @@
     align-items: center;
     gap: 8rem;
     overflow: hidden;
-    height: 100rem;
+    height: 80rem;
     width: 100%;
     border-radius: 12rem;
     background-color: var(--Branco);
@@ -37,6 +37,9 @@
     height: 100%;
     width: 85%;
     padding: 12rem;
+}
+.Conteudo .DivdoTexto .lixeira{
+    background-color: black;
 }
 
 .Conteudo h2, p{
