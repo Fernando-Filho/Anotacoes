@@ -2,6 +2,8 @@ import "./Conteudo.css"
 
 import React, { useState } from "react";
 
+import { CiTrash } from "react-icons/ci";
+
 const Conteudo = ({title, text}) => {
 
     const [openModalConteudo, setopenModalConteudo] = useState(false)
@@ -37,6 +39,8 @@ const Conteudo = ({title, text}) => {
                 <h2>{title}</h2>
                 <p>{text}</p>
             </div>
+
+            <CiTrash/>
 
             <ModalConteudo/>
 
