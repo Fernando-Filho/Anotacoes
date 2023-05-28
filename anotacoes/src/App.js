@@ -12,12 +12,16 @@ function App() {
 
   const [list, setList] = useState([])
   const [openCreateNewNote, setOpenCreateNewNote] = useState(false)
+  const [searchTitle, setSearchTitle] = useState("")
+
 
   function handleSaveNote(note){
     setList([...list, note])
   }
 
-  const ToAddButton = () =>{
+  const filteredList = searchTitle !== "" ? list.filter((item) => item.title.includes(searchTitle)) : list
+  
+  const ToAddButton = () => {
     if(openCreateNewNote === false){
       return(
         <button className="ToAddButton" onClick={() => setOpenCreateNewNote(true)}>
@@ -27,17 +31,20 @@ function App() {
     }
   }
 
+
   return (
     <div className="App">
 
       <header>
-        <Search/>
+        <Search setSearchTitle={setSearchTitle}
+                searchTitle={searchTitle}
+                />
         
       </header>
 
       <main>
-        <CaixaDeConteudo  list={list}/>
-        <CreateNewNote  onAddNote={handleSaveNote}
+        <CaixaDeConteudo  list={filteredList}/>
+        <CreateNewNote  handleSaveNote={handleSaveNote}
                         openCreateNewNote={openCreateNewNote}
                         setOpenCreateNewNote={setOpenCreateNewNote}/>
       </main>
