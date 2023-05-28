@@ -21,9 +21,7 @@
     box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
-.Search .IconSearch{
+.IconSearch{
     position: absolute;
     right: 31%;
-    width: 30px;
-    background-color: var(--Preto_1);
 }
