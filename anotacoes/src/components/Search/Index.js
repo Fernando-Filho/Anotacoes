@@ -4,15 +4,20 @@ import { useState } from "react";
 
 import { AiOutlineSearch } from "react-icons/ai";
 
-const Search = () => {
+const Search = ({searchTitle, setSearchTitle}) => {
 
-    const [searchTitle, setSearchTitle] = useState()
+    const [searchIcon, setSearchIcon] = useState(true)
 
-    function handleSearchNote(props){
-
-        setSearchTitle(props.target.value)
-        // console.log(props.target.value)
+    function handleChangeSearch(e) {
+        setSearchTitle(e.target.value);
+        e.target.value === "" ? setSearchIcon(true) : setSearchIcon(false);
     }
+
+    const SearchIcon = (e) => {
+        if( searchIcon === true )
+        return <AiOutlineSearch className="IconSearch" size={24} color="white"/>
+    }
+
 
     return(
         <div className="Search">
@@ -20,10 +25,11 @@ const Search = () => {
                 type="text"
                 value={searchTitle}
                 placeholder="O que vamos fazer hoje?"
-                onChange={handleSearchNote}
+                onChange={handleChangeSearch}
 
             />
-            <AiOutlineSearch className="IconSearch" size={24} color="white"/>
+
+            <SearchIcon/>            
         </div>
     )
 }
