@@ -11,7 +11,7 @@ const CreateNewNote = (props) => {
         e.preventDefault()
         const data = { title, text }
         console.log(data)
-        props.onAddNote(data)
+        props.handleSaveNote(data)
         handleClearInput()
         handleExitCreateNewNote(e)
     }
