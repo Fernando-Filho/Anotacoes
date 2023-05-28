@@ -6,8 +6,8 @@ const CaixaDeConteudo = ({list}) =>{
 
     return(
         <div className="CaixaDeConteudo">
-            {list.map((note, index) => (
-                <Conteudo key={index} title={note.title} text={note.text} />
+            {list.map((props, index) => (
+                <Conteudo key={index} title={props.title} text={props.text} />
             ))}
         </div>
     )
