@@ -1,6 +1,6 @@
-import "./Search.css"
-
 import { useState } from "react";
+
+import { Search1, InputSearch } from './style'
 
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -15,13 +15,13 @@ const Search = ({searchTitle, setSearchTitle}) => {
 
     const SearchIcon = (e) => {
         if( searchIcon === true )
-        return <AiOutlineSearch className="IconSearch" size={24} color="white"/>
+        return <AiOutlineSearch className="IconSearch" size={24} color="white" />
     }
 
 
     return(
-        <div className="Search">
-            <input 
+        <Search1>
+            <InputSearch 
                 type="text"
                 value={searchTitle}
                 placeholder="O que vamos fazer hoje?"
@@ -30,7 +30,7 @@ const Search = ({searchTitle, setSearchTitle}) => {
             />
 
             <SearchIcon/>            
-        </div>
+        </Search1>
     )
 }
 

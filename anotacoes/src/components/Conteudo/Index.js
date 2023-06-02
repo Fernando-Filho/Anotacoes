@@ -2,6 +2,7 @@ import "./Conteudo.css"
 
 import React, { useState } from "react";
 
+
 import { CiTrash } from "react-icons/ci";
 
 const Conteudo = ({title, text}) => {
@@ -23,7 +24,6 @@ const Conteudo = ({title, text}) => {
                 </div>
             )
         }
-        
     }
 
     return(
@@ -40,7 +40,7 @@ const Conteudo = ({title, text}) => {
                 <p>{text}</p>
             </div>
 
-            <CiTrash/>
+            <CiTrash className="lixeira" size={40} color={"black"}/>
 
             <ModalConteudo/>
 
