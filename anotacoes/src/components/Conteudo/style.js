@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
+    transition: 1s;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,6 +17,11 @@ export const Content = styled.div`
     transition: .2s;
     cursor: pointer;
     box-shadow: 0px 0px 5px 1px rgb(51, 52, 56, 0.5);
+    }
+
+    @media screen and (max-width: 678px){
+        transition: 1s;
+        width: 350px;
     }
 `
 
