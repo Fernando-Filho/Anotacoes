@@ -1,16 +1,6 @@
-import { FooterContainer, Copyright, Link, AddButton } from './style'
-
-import { VscAdd } from "react-icons/vsc";
+import { FooterContainer, Copyright, Link } from './style'
 
 const Footer = ({openCreateNewNote, setOpenCreateNewNote}) => {
-
-    const ToAddButton = () => {
-        if(openCreateNewNote === false){
-          return(
-            <AddButton onClick={() => setOpenCreateNewNote(true)}>+</AddButton>
-          )
-        }
-      }
 
     return( 
         <FooterContainer>
@@ -18,7 +8,6 @@ const Footer = ({openCreateNewNote, setOpenCreateNewNote}) => {
                 Developed by
                 <Link href="https://www.github.com/Fernando-Filho" target='_BLANK'>Fernando Filho</Link>
             </Copyright>
-            <ToAddButton/>
         </FooterContainer>
      )
 }

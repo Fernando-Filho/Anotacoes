@@ -2,7 +2,7 @@ import "./CreateNewNote.css"
 
 import React, { useState } from "react";
 
-const CreateNewNote = (props) => {
+const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}) => {
 
     const [title, setTitle] = useState("")
     const [text, setText] = useState("")
@@ -11,7 +11,7 @@ const CreateNewNote = (props) => {
         e.preventDefault()
         const data = { title, text }
         console.log(data)
-        props.handleSaveNote(data)
+        handleSaveNote(data)
         handleClearInput()
         handleExitCreateNewNote(e)
     }
@@ -23,10 +23,10 @@ const CreateNewNote = (props) => {
 
     function handleExitCreateNewNote(e){
         e.preventDefault()
-        props.setOpenCreateNewNote(!props.openCreateNewNote)
+        setOpenCreateNewNote(!openCreateNewNote)
     }
 
-    if(props.openCreateNewNote === true){
+    if(openCreateNewNote === true){
         return(
             <form className="CreateNewNote" onSubmit={handleCreateNewNote}>
 
@@ -53,11 +53,7 @@ const CreateNewNote = (props) => {
 
                         <button type="submit"
                                 onClick={handleCreateNewNote}>
-                                    {/* <AiOutlineCheck 
-                                        size={25}
-                                        color="var(--Preto1)"/> */}
-
-                                    <span>SALVAR</span>
+                            SALVAR
                         </button>
                         
                         <button type="reset"
