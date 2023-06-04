@@ -7,9 +7,7 @@ const Footer = ({openCreateNewNote, setOpenCreateNewNote}) => {
     const ToAddButton = () => {
         if(openCreateNewNote === false){
           return(
-            <AddButton onClick={() => setOpenCreateNewNote(true)}>
-              <VscAdd className="More"  size={24}/>
-            </AddButton>
+            <AddButton onClick={() => setOpenCreateNewNote(true)}>+</AddButton>
           )
         }
       }
