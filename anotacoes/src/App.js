@@ -2,7 +2,7 @@ import "./app.css"
 
 import { useState } from "react";
 
-import Search from "./components/Search/Index";
+import Header from "./components/Header/Index";
 import CaixaDeConteudo from "./components/CaixaDeConteudo/Index";
 import CreateNewNote from "./components/CreateNewNote/Index";
 
@@ -35,12 +35,11 @@ function App() {
   return (
     <div className="App">
 
-      <header>
-        <Search setSearchTitle={setSearchTitle}
-                searchTitle={searchTitle}
-                />
+      <Header setSearchTitle={setSearchTitle}
+              searchTitle={searchTitle}
+              />
         
-      </header>
+
 
       <main>
         <CaixaDeConteudo  list={filteredList}/>

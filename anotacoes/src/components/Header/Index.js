@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import { Search1, InputSearch } from './style'
+import { HeaderContainer, Search } from './style'
 
 import { AiOutlineSearch } from "react-icons/ai";
 
-const Search = ({searchTitle, setSearchTitle}) => {
+const Header = ({searchTitle, setSearchTitle}) => {
 
     const [searchIcon, setSearchIcon] = useState(true)
 
@@ -20,8 +20,8 @@ const Search = ({searchTitle, setSearchTitle}) => {
 
 
     return(
-        <Search1>
-            <InputSearch 
+        <HeaderContainer>
+            <Search 
                 type="text"
                 value={searchTitle}
                 placeholder="O que vamos fazer hoje?"
@@ -30,8 +30,8 @@ const Search = ({searchTitle, setSearchTitle}) => {
             />
 
             <SearchIcon/>            
-        </Search1>
+        </HeaderContainer>
     )
 }
 
-export default Search
+export default Header

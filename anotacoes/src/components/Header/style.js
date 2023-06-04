@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-export const Search1 = styled.div`
+export const HeaderContainer = styled.header`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 120px;
     width: 100%;
+    background-color: #FEFEFE;
 
     .IconSearch{
         position: absolute;
@@ -19,7 +20,7 @@ export const Search1 = styled.div`
         }
     }
 `
-export const InputSearch = styled.input`
+export const Search = styled.input`
     height: 36%;
     width: 40%;
     border-radius: 8rem;
