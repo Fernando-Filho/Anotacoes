@@ -1,6 +1,6 @@
-import "./app.css"
-
 import { useState } from "react";
+
+import { AppContainer } from './styleApp'
 
 import Header from "./components/Header/Index";
 import Footer from "./components/Footer/Index";
@@ -21,7 +21,7 @@ function App() {
   const filteredList = searchTitle !== "" ? list.filter((item) => item.title.includes(searchTitle)) : list
 
   return (
-    <div className="App">
+    <AppContainer>
 
       <Header setSearchTitle={setSearchTitle}
               searchTitle={searchTitle}/>
@@ -36,7 +36,7 @@ function App() {
 
       <Footer/>
 
-    </div>
+    </AppContainer>
   );
 }
 

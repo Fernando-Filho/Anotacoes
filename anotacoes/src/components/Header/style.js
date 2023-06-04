@@ -12,17 +12,17 @@ export const HeaderContainer = styled.header`
     box-shadow: 0px -1px 5px 2px rgba( 0, 0, 0, 0.5);
 
     .IconSearch{
-        position: absolute;
-        right: 31%;
+        transform: translate(-40px)
     }
-    @media screen and (max-width: 630px){
+    @media screen and (min-width: 75%){
         .IconSearch{
-            transition: 2s;
-            display: none
+            transition: 1s;
+            right: 30%
         }
     }
 `
 export const Search = styled.input`
+    transition: 1s;
     height: 36%;
     width: 370px;
     border-radius: 8rem;
@@ -35,5 +35,10 @@ export const Search = styled.input`
     }
     &:focus{
         box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    @media screen and (max-width: 678px){
+        transition: 1s;
+        width: 250px;
     }
 `

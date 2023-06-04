@@ -26,10 +26,9 @@ const Header = ({searchTitle, setSearchTitle}) => {
                 value={searchTitle}
                 placeholder="O que vamos fazer hoje?"
                 onChange={handleChangeSearch}
-
             />
 
-            <SearchIcon/>            
+            <SearchIcon/>          
         </HeaderContainer>
     )
 }
