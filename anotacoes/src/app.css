@@ -25,5 +25,5 @@
     align-items: center;
     justify-content: center;
     gap: 24rem;
-    width: 100%;
+    min-width: 100vw;
 }

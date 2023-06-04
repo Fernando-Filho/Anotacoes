@@ -36,8 +36,7 @@ function App() {
     <div className="App">
 
       <Header setSearchTitle={setSearchTitle}
-              searchTitle={searchTitle}
-              />
+              searchTitle={searchTitle}/>
         
 
 
