@@ -15,7 +15,7 @@ const Header = ({searchTitle, setSearchTitle}) => {
 
     const SearchIcon = (e) => {
         if( searchIcon === true )
-        return <AiOutlineSearch className="IconSearch" size={24} color="white" />
+        return <AiOutlineSearch className="IconSearch" size={24} color="white"/>
     }
 
 

@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    justify-content: space-between;
+    height: 100vh;
     width: 100%;
     color: aliceblue;
 }
@@ -18,16 +19,6 @@
     cursor: pointer;
 }
 
-/* .App header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 120rem;
-    width: 100%;
-    background-color: var(--Branco);
-} */
-
 .App main{
     display: flex;
     flex-direction: column;
@@ -35,22 +26,4 @@
     justify-content: center;
     gap: 24rem;
     width: 100%;
-}
-footer .ToAddButton{
-    position: fixed;
-    right: 25rem;
-    bottom: 25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60rem;
-    width: 60rem;
-    border-radius: 50%;
-    border: solid 1rem rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 5px 0px var(--Preto_2);
-}
-foorter .ToAddButton:hover{
-    transition: .5s;
-    cursor: pointer;
-    box-shadow: 1px 1px 10px 2px var(--Preto_2);
 }

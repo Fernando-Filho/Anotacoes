@@ -3,10 +3,10 @@ import "./app.css"
 import { useState } from "react";
 
 import Header from "./components/Header/Index";
+import Footer from "./components/Footer/Index";
 import CaixaDeConteudo from "./components/CaixaDeConteudo/Index";
 import CreateNewNote from "./components/CreateNewNote/Index";
 
-import { VscAdd } from "react-icons/vsc";
 
 function App() {
 
@@ -21,15 +21,15 @@ function App() {
 
   const filteredList = searchTitle !== "" ? list.filter((item) => item.title.includes(searchTitle)) : list
   
-  const ToAddButton = () => {
-    if(openCreateNewNote === false){
-      return(
-        <button className="ToAddButton" onClick={() => setOpenCreateNewNote(true)}>
-          <VscAdd className="More"  size={24} color=""/>
-        </button>
-      )
-    }
-  }
+  // const ToAddButton = () => {
+  //   if(openCreateNewNote === false){
+  //     return(
+  //       <button className="ToAddButton" onClick={() => setOpenCreateNewNote(true)}>
+  //         <VscAdd className="More"  size={24} color=""/>
+  //       </button>
+  //     )
+  //   }
+  // }
 
 
   return (
@@ -48,9 +48,8 @@ function App() {
                         setOpenCreateNewNote={setOpenCreateNewNote}/>
       </main>
 
-      <footer>
-        <ToAddButton/>
-      </footer>
+      <Footer openCreateNewNote={openCreateNewNote}
+              setOpenCreateNewNote={setOpenCreateNewNote}/>
 
     </div>
   );
