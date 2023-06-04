@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 10%;
-    width: 100%;
+    min-width: 100vw;
     background-color: #fffafa;
 
     .IconSearch{

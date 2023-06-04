@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
+    position: fixed;
+    bottom: 0;
     height: 7%;
-    width: 100%;
+    min-width: 100vw;
     background-color: #fffafa;
 `
 
