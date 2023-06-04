@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
     justify-content: center;
     height: 10%;
     width: 100%;
-    background-color: #FEFEFE;
+    background-color: #fffafa;
 
     .IconSearch{
         position: absolute;
