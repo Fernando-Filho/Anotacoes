@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
+    margin-top: 111px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 16rem;
-    min-width: 100vw;
+    max-width: 95%;
 `
 
 export const AddButton = styled.button`

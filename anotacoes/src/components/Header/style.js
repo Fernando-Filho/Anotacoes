@@ -24,7 +24,7 @@ export const HeaderContainer = styled.header`
 `
 export const Search = styled.input`
     height: 36%;
-    width: 40%;
+    width: 370px;
     border-radius: 8rem;
     padding-left: 10rem;
     font-size: 16rem;
@@ -37,5 +37,3 @@ export const Search = styled.input`
         box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.5);
     }
 `
-
-
