@@ -6,9 +6,10 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 10%;
+    height: 95px;
     min-width: 100vw;
     background-color: #fffafa;
+    box-shadow: 0px -1px 5px 2px rgba( 0, 0, 0, 0.5);
 
     .IconSearch{
         position: absolute;
