@@ -33,7 +33,6 @@ export const Search = styled.input`
     }
 
     @media screen and (max-width: 678px){
-        transition: 1s;
         width: 250px;
     }
 `
