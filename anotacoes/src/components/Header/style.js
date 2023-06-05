@@ -10,15 +10,10 @@ export const HeaderContainer = styled.header`
     min-width: 100vw;
     background-color: #fffafa;
     box-shadow: 0px -1px 5px 2px rgba( 0, 0, 0, 0.5);
+    z-index: 1;
 
     .IconSearch{
         transform: translate(-40px)
-    }
-    @media screen and (min-width: 75%){
-        .IconSearch{
-            transition: 1s;
-            right: 30%
-        }
     }
 `
 export const Search = styled.input`

@@ -2,6 +2,8 @@ import "./CreateNewNote.css"
 
 import React, { useState } from "react";
 
+import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea } from './style'
+
 const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}) => {
 
     const [title, setTitle] = useState("")
@@ -28,26 +30,25 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
 
     if(openCreateNewNote === true){
         return(
-            <form className="CreateNewNote" onSubmit={handleCreateNewNote}>
-
-                <div className="Modal">
+            <ModalCreateNewNote onSubmit={handleCreateNewNote}>
+                <Modal>
 
                     <h1>Crie sua anotação</h1>
 
-                    <div className="Inputs">
+                    <Inputs>
 
-                        <input  type="text"
-                                value={title}
-                                placeholder="Título"
-                                onChange={e => setTitle(e.target.value)}
-                                required/>
-
-                        <textarea   value={text}
-                                    placeholder="Assunto..."
-                                    onChange={e => setText(e.target.value)}
+                        <InputText  type="text"
+                                    value={title}
+                                    placeholder="Título"
+                                    onChange={e => setTitle(e.target.value)}
                                     required/>
 
-                    </div>
+                        <InputTextArea  value={text}
+                                        placeholder="Assunto..."
+                                        onChange={e => setText(e.target.value)}
+                                        required/>
+
+                    </Inputs>
 
                     <div className="orientionButtons">
 
@@ -60,8 +61,8 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
                                 onClick={handleExitCreateNewNote}
                                 >CANCELAR</button>
                     </div>
-                </div>
-            </form>
+                </Modal>
+            </ModalCreateNewNote>
         )
     }
 }

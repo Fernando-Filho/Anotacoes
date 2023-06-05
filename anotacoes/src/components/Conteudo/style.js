@@ -19,8 +19,13 @@ export const Content = styled.div`
     box-shadow: 0px 0px 5px 1px rgb(51, 52, 56, 0.5);
     }
 
+    .lixeira{
+        transform: translate(-20px)
+    }
+
     @media screen and (max-width: 678px){
         transition: 1s;
+        height: 80px;
         width: 350px;
     }
 `
@@ -46,10 +51,11 @@ export const TextContainer = styled.div`
     width: 85%;
     padding: 12rem;
     color: #212235;
-`
-export const Title = styled.h2`
-    font-size: 20rem;
-`
-export const Text = styled.p`
-    font-size: 16rem;
+
+    h2{
+        font-size: 20rem;
+    }
+    p{
+        font-size: 16rem;
+    }
 `

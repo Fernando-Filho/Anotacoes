@@ -6,7 +6,6 @@ export const FooterContainer = styled.footer`
     height: 65px;
     min-width: 100vw;
     background-color: #fffafa;
-    user-select: none;
 `
 
 export const Copyright = styled.div`
