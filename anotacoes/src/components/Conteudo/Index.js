@@ -16,7 +16,7 @@ const Conteudo = ({title, text, handleDeleteNote}) => {
 
             return(
                 <ModalContainer onClick={() => setopenModalConteudo(!openModalConteudo)}>
-                    <Modal>
+                    <Modal onClick={(e) => e.stopPropagation()}>
                         <ModalTitle>{title}</ModalTitle>
                         <ModalText>{text}</ModalText>
                     </Modal>
