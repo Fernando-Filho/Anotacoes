@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const ModalCreateNewNote = styled.form`
     position: fixed;
@@ -49,7 +49,6 @@ export const Inputs = styled.div`
         font-size: 16rem;
     }
 `
-
 export const InputText = styled.input`
     height: 40rem;
 
@@ -64,4 +63,42 @@ export const InputTextArea = styled.textarea`
     &:focus{
         box-shadow: 3px 3px 10px -1px var(--Preto_2);
     }
+`
+
+export const ButtonBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 12rem;
+    height: 20%;
+    width: 100%;
+    padding-right: 12rem;
+    `
+export const Buttons = styled.button`
+    height: 40rem;
+    width: 100rem;
+    border-radius: 8rem;
+    
+    ${props => props.$submit && css`
+        background-color: rgb(46,164,79);
+        color: #ffffff;
+
+        &:hover{
+            transition: .5s;
+            background-color: rgb(46,164,79,0.8);
+        }
+    `
+
+}
+    ${props => props.$reset && css`
+        background-color: rgb(229,10,30);
+        color: #ffffff;
+        
+        &:hover{
+            transition: .5s;
+            background-color: rgb(229,10,30,0.8);
+        }
+    `}
+
 `
