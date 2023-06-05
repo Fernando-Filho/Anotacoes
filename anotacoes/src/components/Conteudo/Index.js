@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import { Content, SingleCaracter, TextContainer, Title, Text } from './style'
+import { Content, SingleCaracter, TextContainer } from './style'
 import { ModalContainer, Modal, ModalTitle, ModalText} from './styleModal'
 
 
 import { CiTrash } from "react-icons/ci";
 
-const Conteudo = ({title, text}) => {
+const Conteudo = ({title, text, handleDeleteNote}) => {
 
     const [openModalConteudo, setopenModalConteudo] = useState(false)
 
@@ -25,6 +25,11 @@ const Conteudo = ({title, text}) => {
         }
     }
 
+    function DeleteItemList (e) {
+        e.stopPropagation();
+        handleDeleteNote(title)
+    }
+
     return(
         <Content onClick={() => setopenModalConteudo(!openModalConteudo)}>
             
@@ -33,11 +38,11 @@ const Conteudo = ({title, text}) => {
             </SingleCaracter>
 
             <TextContainer>
-                <Title>{title}</Title>
-                <Text>{text}</Text>
+                <h2>{title}</h2>
+                <p>{text}</p>
             </TextContainer>
 
-            <CiTrash className="lixeira" size={40} color={"black"}/>
+            <CiTrash className="lixeira" size={40} color="black" onClick={DeleteItemList}/>
 
             <ModalConteudo/>
 

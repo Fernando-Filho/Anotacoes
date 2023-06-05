@@ -20,6 +20,11 @@ function App() {
 
   const filteredList = searchTitle !== "" ? list.filter((item) => item.title.includes(searchTitle)) : list
 
+  function handleDeleteNote(itemToDelete){
+    const upadetedItems = list.filter((item) => item.title !== itemToDelete)
+    setList(upadetedItems)
+  }
+
   return (
     <AppContainer>
 
@@ -31,7 +36,8 @@ function App() {
       <Main list={filteredList}
             handleSaveNote={handleSaveNote}
             openCreateNewNote={openCreateNewNote}
-            setOpenCreateNewNote={setOpenCreateNewNote}/>
+            setOpenCreateNewNote={setOpenCreateNewNote}
+            handleDeleteNote={handleDeleteNote}/>
 
 
       <Footer/>

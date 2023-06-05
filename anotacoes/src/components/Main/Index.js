@@ -5,7 +5,7 @@ import { MainContainer, AddButton } from './style'
 import Conteudo from "../Conteudo/Index"
 import CreateNewNote from "../CreateNewNote/Index";
 
-const Main = ({list, handleSaveNote}) =>{
+const Main = ({list, handleSaveNote, handleDeleteNote}) =>{
 
     const [openCreateNewNote, setOpenCreateNewNote] = useState(false)
 
@@ -20,7 +20,7 @@ const Main = ({list, handleSaveNote}) =>{
     return(
         <MainContainer>
             {list.map((props, index) => (
-                <Conteudo key={index} title={props.title} text={props.text} />
+                <Conteudo key={index} title={props.title} text={props.text} handleDeleteNote={handleDeleteNote}/>
             ))}
 
             <CreateNewNote  handleSaveNote={handleSaveNote}
