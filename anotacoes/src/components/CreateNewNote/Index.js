@@ -2,7 +2,7 @@ import "./CreateNewNote.css"
 
 import React, { useState } from "react";
 
-import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea } from './style'
+import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea, ButtonBox, Buttons } from './style'
 
 const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}) => {
 
@@ -25,6 +25,7 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
 
     function handleExitCreateNewNote(e){
         e.preventDefault()
+        handleClearInput()
         setOpenCreateNewNote(!openCreateNewNote)
     }
 
@@ -36,7 +37,6 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
                     <h1>Crie sua anotação</h1>
 
                     <Inputs>
-
                         <InputText  type="text"
                                     value={title}
                                     placeholder="Título"
@@ -47,20 +47,21 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
                                         placeholder="Assunto..."
                                         onChange={e => setText(e.target.value)}
                                         required/>
-
                     </Inputs>
 
-                    <div className="orientionButtons">
-
-                        <button type="submit"
-                                onClick={handleCreateNewNote}>
-                            SALVAR
-                        </button>
+                    <ButtonBox>
+                        <Buttons    $submit
+                                    type="submit"
+                                    onClick={handleCreateNewNote}>
+                                    SALVAR
+                        </Buttons>
                         
-                        <button type="reset"
-                                onClick={handleExitCreateNewNote}
-                                >CANCELAR</button>
-                    </div>
+                        <Buttons    $reset
+                                    type="reset"
+                                    onClick={handleExitCreateNewNote}
+                                    >CANCELAR
+                        </Buttons>
+                    </ButtonBox>
                 </Modal>
             </ModalCreateNewNote>
         )

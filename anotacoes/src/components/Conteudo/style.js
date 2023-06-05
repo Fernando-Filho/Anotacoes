@@ -24,7 +24,6 @@ export const Content = styled.div`
     }
 
     @media screen and (max-width: 678px){
-        transition: 1s;
         height: 80px;
         width: 350px;
     }
