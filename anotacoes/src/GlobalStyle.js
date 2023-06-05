@@ -1,15 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
     *{
         margin: 0;
         padding: 0;
         border: none;
         box-sizing: border-box;
+        font-family: 'Manrope', sans-serif;
     }
 
     :root{
         font-size: 6.25%;
+        user-select: none;
 
         --Branco: #FEFEFE;
         --Branco_Gelo: #dddada;
