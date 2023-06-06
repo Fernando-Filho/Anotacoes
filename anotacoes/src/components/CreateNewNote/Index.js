@@ -4,8 +4,8 @@ import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea, ButtonCont
 
 const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}) => {
 
-    const [title, setTitle] = useState("")
-    const [text, setText] = useState("")
+    const [title, setTitle] = useState()
+    const [text, setText] = useState()
 
     function handleCreateNewNote(e){
         e.preventDefault()
@@ -39,12 +39,12 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
                                     value={title}
                                     placeholder="Título"
                                     onChange={e => setTitle(e.target.value)}
-                                    required/>
+                                    required={true}/>
 
                         <InputTextArea  value={text}
                                         placeholder="Assunto..."
                                         onChange={e => setText(e.target.value)}
-                                        required/>
+                                        required={true}/>
                     </Inputs>
 
                     <ButtonContainer>
