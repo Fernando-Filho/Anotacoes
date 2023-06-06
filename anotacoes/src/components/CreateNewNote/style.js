@@ -79,13 +79,14 @@ export const Buttons = styled.button`
     height: 40rem;
     width: 100rem;
     border-radius: 8rem;
+    border: solid 1rem var(--Cinza);
     
     ${props => props.$submit && css`
         background-color: rgb(46,164,79);
         color: #ffffff;
 
         &:hover{
-            transition: .5s;
+            transition: .1s;
             background-color: rgb(46,164,79,0.8);
         }
     `
@@ -96,7 +97,7 @@ export const Buttons = styled.button`
         color: #ffffff;
         
         &:hover{
-            transition: .5s;
+            transition: .1s;
             background-color: rgb(229,10,30,0.8);
         }
     `}

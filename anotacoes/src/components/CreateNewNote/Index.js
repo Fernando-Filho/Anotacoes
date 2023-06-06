@@ -1,5 +1,3 @@
-import "./CreateNewNote.css"
-
 import React, { useState } from "react";
 
 import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea, ButtonBox, Buttons } from './style'
