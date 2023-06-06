@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Content, SingleCaracter, TextContainer } from './style'
-import { ModalContainer, Modal} from './styleModal'
+import { ModalContainer, Modal, ButtonContainer, Buttons} from './styleModal'
 
 
 import { CiTrash } from "react-icons/ci";
@@ -15,10 +15,26 @@ const Conteudo = ({title, text, handleDeleteNote}) => {
         if(openModalConteudo === true){
 
             return(
-                <ModalContainer onClick={() => setopenModalConteudo(!openModalConteudo)}>
+                <ModalContainer>
                     <Modal onClick={(e) => e.stopPropagation()}>
                         <h2>{title}</h2>
                         <p>{text}</p>
+
+
+                        <ButtonContainer>
+                            <Buttons    $Exit
+                                        type="reset"
+                                        onClick={() => setopenModalConteudo(!openModalConteudo)}
+                                        >FECHAR
+                            </Buttons>
+
+                            <Buttons    $Delete
+                                        type="submit"
+                                        onClick={DeleteItemList}>
+                                        DELETAR
+                            </Buttons>
+                        </ButtonContainer>
+                        
                     </Modal>
                 </ModalContainer>
             )
@@ -42,7 +58,7 @@ const Conteudo = ({title, text, handleDeleteNote}) => {
                 <p>{text}</p>
             </TextContainer>
 
-            <CiTrash className="lixeira" size={40} color="black" onClick={DeleteItemList}/>
+            <CiTrash className="lixeira" color="black" onClick={DeleteItemList}/>
 
             <ModalConteudo/>
 
