@@ -77,7 +77,7 @@ export const ButtonContainer = styled.div`
     height: 20%;
     width: 100%;
     padding-right: 12rem;
-    `
+`
 export const Buttons = styled.button`
     height: 40rem;
     width: 100rem;
