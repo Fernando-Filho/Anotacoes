@@ -5,9 +5,8 @@ export const Content = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8rem;
     overflow: hidden;
-    min-height: 80px;
+    height: 80px;
     width: 650px;
     border-radius: 12rem;
     background-color: #ffffff;
@@ -20,11 +19,11 @@ export const Content = styled.div`
     }
 
     .lixeira{
-        transform: translate(-20px)
+        /* transform: translate(-10px); */
+        
     }
 
     @media screen and (max-width: 678px){
-        height: 80px;
         width: 350px;
     }
 `
@@ -39,7 +38,7 @@ export const SingleCaracter = styled.div`
     min-width: 100px;
     background-color: #212235;;
     color: #b3b3b3;
-    font-size: 80rem;
+    font-size: 68rem;
 `
 
 export const TextContainer = styled.div`
@@ -47,9 +46,10 @@ export const TextContainer = styled.div`
     flex-direction: column;
     gap: 8rem;
     height: 100%;
-    width: 85%;
+    width: 600px;
     padding: 12rem;
     color: #212235;
+    background-color: red;
 
     h2{
         font-size: 20rem;

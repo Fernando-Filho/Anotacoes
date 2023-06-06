@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Content, SingleCaracter, TextContainer } from './style'
-import { ModalContainer, Modal, ModalTitle, ModalText} from './styleModal'
+import { ModalContainer, Modal} from './styleModal'
 
 
 import { CiTrash } from "react-icons/ci";
@@ -17,8 +17,8 @@ const Conteudo = ({title, text, handleDeleteNote}) => {
             return(
                 <ModalContainer onClick={() => setopenModalConteudo(!openModalConteudo)}>
                     <Modal onClick={(e) => e.stopPropagation()}>
-                        <ModalTitle>{title}</ModalTitle>
-                        <ModalText>{text}</ModalText>
+                        <h2>{title}</h2>
+                        <p>{text}</p>
                     </Modal>
                 </ModalContainer>
             )

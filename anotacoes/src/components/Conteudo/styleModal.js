@@ -11,20 +11,22 @@ export const ModalContainer = styled.div`
     height: 101%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(2rem);
-    cursor: default;
+    backdrop-filter: blur(15px);
     color: #212235;
 `
 export const Modal = styled.div`
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     height: 500px;
-    width: 500px;
-    padding: 40rem;
-    border-radius: 12rem;
-    background-color: var(--Branco);
-`
-export const ModalTitle = styled.h2`
-    font-size: 20rem;
-`
-export const ModalText = styled.p`
-    font-size: 16rem;
+    width: 600px;
+    border-radius: 10rem;
+    background-color: #fffafa;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+
+    h2{ font-size: 20rem; }
+
+    p { font-size: 16rem; }
 `

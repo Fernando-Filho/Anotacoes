@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea, ButtonBox, Buttons } from './style'
+import { ModalCreateNewNote, Modal, Inputs, InputText, InputTextArea, ButtonContainer, Buttons } from './style'
 
 const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}) => {
 
@@ -47,7 +47,7 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
                                         required/>
                     </Inputs>
 
-                    <ButtonBox>
+                    <ButtonContainer>
                         <Buttons    $submit
                                     type="submit"
                                     onClick={handleCreateNewNote}>
@@ -59,7 +59,7 @@ const CreateNewNote = ({handleSaveNote, openCreateNewNote, setOpenCreateNewNote}
                                     onClick={handleExitCreateNewNote}
                                     >CANCELAR
                         </Buttons>
-                    </ButtonBox>
+                    </ButtonContainer>
                 </Modal>
             </ModalCreateNewNote>
         )
